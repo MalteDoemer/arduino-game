@@ -1,17 +1,18 @@
 class GameObject {
   public:
     float x, y;
-    float height;
+    float w, h;
     float vx, vy;
     char character;
 
     GameObject() = default;
 
-    GameObject(float x, float y, float height, float vx, float vy, char character)
+    GameObject(float x, float y, float w, float h, float vx, float vy, char character)
     {
       this->x = x;
       this->y = y;
-      this->height = height;
+      this->w = w;
+      this->h = h;
       this->vx = vx;
       this->vy = vy;
       this->character = character;
@@ -32,7 +33,7 @@ class GameObject {
 
 class Player : public GameObject {
   public:
-    Player() : GameObject(1.0f / 16.0f, 0.5f, 0.5f, 0.0f, 0.0f, playerChar)
+    Player() : GameObject(0.0625, 0.5f, 0.0625, 0.5f, 0.0f, 0.0f, playerChar)
     {
     }
 
@@ -52,5 +53,12 @@ class Player : public GameObject {
         y = 0.0f;
         vy = 0.0f;
       }
+    }
+};
+
+class Enemy : public GameObject {
+  public:
+    bool collide(Player* player) {
+      
     }
 };

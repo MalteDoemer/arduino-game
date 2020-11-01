@@ -12,7 +12,7 @@ class JumpAndRun : public LCDGameEngine {
     Player player;
 
   public:
-    JumpAndRun(): 
+    JumpAndRun():
       LCDGameEngine(16, 2, 11, 12, 4, 5, 6, 7)
     {
     }
