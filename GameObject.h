@@ -44,8 +44,8 @@ class Player : public GameObject {
       y += vy * elapsed;
 
 
-      if (y > (1.0f - height)) {
-        y = 1.0f - height;
+      if (y > (1.0f - h)) {
+        y = 1.0f - h;
         vy = 0.0f;
       }
 

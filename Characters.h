@@ -1,6 +1,6 @@
 const char playerChar = '\1';
 
-byte playerData[] = {
+const byte PROGMEM playerData[] = {
   0b10001,
   0b11111,
   0b01010,
